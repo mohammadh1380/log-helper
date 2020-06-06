@@ -12,4 +12,4 @@ Import and use the package after installing as follows:
 
 ```
 
-For more use cases, take a look at the 'tests' directory.
+For more use cases, take a look at the `tests` directory.
