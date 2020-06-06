@@ -1,6 +1,6 @@
 import logging
 
-from log_helper import CommonLogger
+from loghelper import CommonLogger
 
 logger = logging.getLogger(__name__)
 
