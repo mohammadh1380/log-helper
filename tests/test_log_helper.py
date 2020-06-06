@@ -1,5 +1,5 @@
 import logging
-from loghelper.loghelper import CommonLogger
+from loghelper import CommonLogger
 
 # Tests
 if __name__ == '__main__':
