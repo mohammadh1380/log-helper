@@ -4,9 +4,8 @@ import datetime as dt
 from logging import Logger
 from logging.handlers import TimedRotatingFileHandler
 
-DEFAULT_LOG_FORMAT = "%(asctime)s %(levelname)-8s [%(filename)s:%(lineno)d %(funcName)s] %(message)s" \
+DEFAULT_LOG_FORMAT = "%(asctime)s %(levelname)-8s %(name)s [%(filename)s:%(lineno)d %(funcName)s] %(message)s" \
     # " - PID:%(process)d/%(processName)s - TID:%(thread)d/%(threadName)s"
-# - %(name)s
 # TODO: add extras fields (e.g. username, client_ip, request_body), implement this with customConfig by the user (dev)
 #
 
