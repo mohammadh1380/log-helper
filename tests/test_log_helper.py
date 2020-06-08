@@ -19,8 +19,15 @@ if __name__ == '__main__':
         func_logger.error("Logging mock_exception inside function")
         logger.warning("Reused the logger with file handler from outer scope")
 
+
     test_func()
 
-    from tests.test_format1 import test_func as test_func_from_another_file
+    from tests.test_some_module import test_func as test_func_from_another_file
+
     test_func_from_another_file()
 
+    # log records with a custom format with extra fields
+    custom_logger = CommonLogger(__name__, level=logging.DEBUG,
+                                 log_format="%(asctime)s %(levelname)-8s %(name)s "
+                                            "[%(filename)s:%(lineno)d %(funcName)s] %(clientip)s %(message)s")
+    custom_logger.info("User login", extra={'clientip': '127.0.0.1'})
