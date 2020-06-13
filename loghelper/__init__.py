@@ -15,7 +15,7 @@ class CommonLogger(Logger):
                  log_format=DEFAULT_LOG_FORMAT,
                  *args, **kwargs
                  ):
-        self.formatter = logging.Formatter(log_format, datefmt='%Y-%m-%d %H:%M:%S %z')
+        self.formatter = logging.Formatter(log_format, datefmt='%Y-%m-%d %H:%M:%S%z')
         self.log_file = log_file
 
         Logger.__init__(self, name, *args, **kwargs)
