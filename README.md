@@ -20,8 +20,9 @@ pip uninstall loghelper
 Import and use the package after installing as follows:
 ```
 >>> Python 3 Shell
+> import logging
 > from loghelper import CommonLogger
-> logger = CommonLogger(log_file='path/to/app.log', level=logging.DEBUG)
+> logger = CommonLogger(name=__name__, log_file='path/to/app.log', level=logging.DEBUG)
 > logger.info('Test log message')
 
 ```
